@@ -11,15 +11,18 @@
   "dependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
+    "bootstrap": "^5.1.3",
     "del": "^6.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "fullpage.js": "^3.1.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-nodemon": "^2.5.0",
     "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "gulp-sourcemaps": "^3.0.0",
+    "jquery": "^3.6.0"
   },
   "devDependencies": {
     "sass": "^1.49.9"

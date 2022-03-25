@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 
+
 app.set('views', `${__dirname}/dist/`)
 app.engine('html',require('ejs').renderFile)
 app.set('view engine','html')

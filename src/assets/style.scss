@@ -1,0 +1,64 @@
+.wrap {
+  width: 100%;
+  background-image: url(./img/bg-patten.png);
+  font-family: "Noto Sans KR", sans-serif;
+  // font-family: "Ubuntu", sans-serif;
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #1c1d24;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    padding: 0px 24px;
+    opacity: 0.8;
+    h1 {
+      margin-bottom: 0px;
+      width: 250px;
+      height: 100px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    nav {
+      ul {
+        margin: 0px;
+        li {
+          display: inline-block;
+          padding: 16px 24px;
+          a {
+            font-size: 16px;
+            font-family: "Ubuntu", sans-serif;
+            color: #fff;
+            font-weight: 300;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  section {
+    height: 100vh;
+    &.home-section {
+    }
+    &.about-section {
+      background-color: green;
+    }
+    &.portflio-section {
+      background-color: orange;
+    }
+    &.skill-section {
+      background-color: salmon;
+    }
+    &.content-section {
+      background-color: aqua;
+    }
+  }
+}
