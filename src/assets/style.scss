@@ -31,7 +31,6 @@
         margin: 0;
         li {
           display: inline-block;
-
           &:hover {
             border-bottom: 1px solid #53f6c7;
           }
@@ -104,14 +103,13 @@
       }
     }
     &.about-section {
-      max-width: 1400px;
       width: 100%;
       .about-box {
         display: flex;
         justify-content: space-between;
         margin-bottom: 60px;
         .box {
-          width: 650px;
+          width: 50%;
           border-radius: 12px;
           height: 300px;
           padding: 50px 0px;
@@ -180,6 +178,12 @@
       }
     }
     &.portflio-section {
+      .portflio-area {
+        .grid-item {
+          background-color: red;
+          width: 33.3333%;
+        }
+      }
     }
     &.skill-section {
       .main-title {
@@ -188,7 +192,7 @@
         display: flex;
         justify-content: space-between;
         .box {
-          width: 650px;
+          width: 50%;
           border-radius: 12px;
           padding: 50px;
           background-color: #363636;
@@ -223,20 +227,94 @@
         }
       }
     }
-    &.content-section {
-      .contact {
-        .box {
-          width: 650px;
-          border-radius: 12px;
-          padding: 50px;
-          background-color: #363636;
-          .title {
-            color: #fff;
+    &.contact-section {
+      .contact-area {
+        display: flex;
+        justify-content: space-between;
+      }
+      .box {
+        width: 50%;
+        border-radius: 12px;
+        padding: 100px 50px;
+        background-color: #363636;
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 8px;
+        .title {
+          color: #fff;
+          font-weight: 700;
+          font-family: "Ubuntu", sans-serif;
+          margin-bottom: 24px;
+          font-size: 28px;
+        }
+        .desc {
+          font-size: 18px;
+          color: #fff;
+          line-height: 48px;
+          span {
+            font-size: 22px;
+            color: #53f6c7;
             font-weight: 700;
-            font-family: "Ubuntu", sans-serif;
-            margin-bottom: 24px;
-            font-size: 28px;
           }
+        }
+        a {
+          color: #fff;
+          &:active {
+            text-decoration: none;
+          }
+        }
+        .icon-area {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          a {
+            i {
+              font-size: 32px;
+              &:hover {
+                color: #53f6c7;
+              }
+            }
+          }
+        }
+      }
+      .msg {
+        margin-left: 8px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        input {
+          &:focus {
+            outline: none;
+          }
+        }
+        .form-control {
+          width: 100%;
+          margin-bottom: 30px;
+          border: 1px solid #363636;
+          background-color: transparent !important;
+          color: #fff;
+          outline: none;
+          &:focus,
+          &:active {
+            border: 1px solid #363636;
+            outline: none;
+          }
+        }
+        textarea {
+          width: 100%;
+          background-color: transparent;
+          resize: none;
+          border: 1px solid #363636;
+          color: #fff;
+          margin-bottom: 30px;
+          padding: 10px;
+          &:focus,
+          &:active {
+            outline: none;
+          }
+        }
+        .btn {
+          width: 100%;
         }
       }
     }
@@ -251,5 +329,18 @@
       color: #fff;
       text-align: center;
     }
+  }
+}
+
+// 애니메이션
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+    background-color: #53f6c7;
   }
 }

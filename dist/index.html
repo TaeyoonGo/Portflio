@@ -21,11 +21,13 @@
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
         <!-- css end -->
     </head>
     <body>
         <div class="wrap">
-            <header class="_header">
+            <!-- header s-->
+            <header class="header _header">
                 <h1>
                     <a href="/"><img src="./assets/img/img-logo.gif" alt="로고이미지"></a>
                 </h1>
@@ -49,6 +51,8 @@
                     </ul>
                 </nav>
             </header>
+            <!-- header e -->
+            <!-- home-section s -->
             <section class="home-section">
                 <div class="home-bg"></div>
                 <div class="text-area">
@@ -59,6 +63,8 @@
                     <p class="slogan">발전하는 웹 개발자 고태윤 입니다.</p>
                 </div>
             </section>
+            <!-- home-section e-->
+            <!-- about-section s -->
             <section class="about-section">
                 <p class="main-title">About Me</p>
                 <div class="about-box">
@@ -70,8 +76,7 @@
                                 <span>좋은 코드</span>를 생각하고<br>
                                 좋은
                                 <span>의사 소통</span>을 위해 노력하며<br>
-                                지식을
-                                <span>연마 하는</span>웹 개발자입니다.
+                                <span>지식을 연마</span>하는 웹 개발자입니다.
                             </p>
                         </div>
                         <div class="logo">
@@ -94,9 +99,23 @@
                         작은 것 하나하나 놓치지 않고 최선을 다할것을 약속드립니다.</p>
                 </div>
             </section>
+            <!-- about-section e -->
+            <!-- portflio-section s -->
             <section class="portflio-section">
                 <p class="main-title">Portflio</p>
+                <div
+                    class="portflio-area grid"
+                    data-masonry='{ "itemSelector": "._grid-item", "columnWidth": 200 }'>
+                    <div class="_grid-item"></div>
+                    <div class="_grid-item"></div>
+                    <div class="_grid-item"></div>
+                    <div class="_grid-item"></div>
+                    <div class="_grid-item"></div>
+                    <div class="_grid-item"></div>
+                </div>
             </section>
+            <!-- portflio-section e -->
+            <!-- skill-section s -->
             <section class="skill-section">
                 <p class="main-title">Skill</p>
                 <div class="box-area">
@@ -119,8 +138,8 @@
                                 <img src="./assets/img/img-bootstrap-logo.svg" alt="bootstrap">
                             </div>
                             <div class="img">
-                              <img src="./assets/img/img-photoshop-logo.svg" alt="photohshop">
-                          </div>
+                                <img src="./assets/img/img-photoshop-logo.svg" alt="photohshop">
+                            </div>
                         </div>
                     </div>
                     <div class="box experience">
@@ -130,8 +149,8 @@
                                 <img src="./assets/img/img-vue-logo.svg" alt="vue">
                             </div>
                             <div class="img">
-                              <img src="./assets/img/img-nodejs-logo.svg" alt="nodejs">
-                          </div>
+                                <img src="./assets/img/img-nodejs-logo.svg" alt="nodejs">
+                            </div>
                             <div class="img">
                                 <img src="./assets/img/img-aws-logo.svg" alt="Aws">
                             </div>
@@ -150,43 +169,82 @@
                             <div class="img">
                                 <img src="./assets/img/img-zeplin-logo.svg" alt="zeplin">
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="content-section">
-                <p class="main-title">Content</p>
+            <!-- skill-section e -->
+            <!-- contant-section s -->
+            <section class="contact-section">
+                <p class="main-title">Contact</p>
                 <div class="contact-area">
-                  <div class="contact">
                     <div class="box">
-                      <div class="text">
-                        <p class="title">
-                            Contact Me
-                        </p>
-                        <p class="desc">
-                          <span>Phone</span> : 010-9971-7063<br>
-                          <span>Email</span> : taeyoongo007@gmail.com<br>
-                          <span>Git</span> : https://github.com/TaeyoonGo
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="msg">
+                        <div class="text">
+                            <p class="title">
+                                Contact Me
+                            </p>
+                            <p class="desc">
+                                <span>Phone</span>
+                                :
+                                <a href="tel:010-9971-7063">010-9971-7063</a><br>
+                                <span>Email</span>
+                                :
+                                <a href="mailto:taeyoongo007@gmail.com">taeyoongo007@gmail.com</a><br>
+                                <span>Notion</span>
+                                :
+                                <a
+                                    target="_blink"
+                                    href="https://www.notion.so/Taeyoon__Go-383b1bfb350344a3a906d973be970f9f">Click</a>
+                            </p>
+                        </div>
+                        <div class="icon-area">
+                            <a href="https://www.instagram.com/taeyoon__go" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
 
-                  </div>
+                            <a href="https://github.com/TaeyoonGo" target="_blank">
+                                <i class="fa-brands fa-git-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="msg">
+                        <input type="text" class="form-control" name="name" placeholder="성함을 입력해주세요">
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="email"
+                            placeholder="메일 주소를 입력해주세요">
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="phone"
+                            placeholder="연락처를 입력해주세요 (생략 가능)">
+                        <textarea name="message" rows="5" placeholder="내용을 입력해주세요 "></textarea>
+                        <input type="button" name="submit" class="btn btn-light" value="메일보내기"/>
+                    </div>
                 </div>
             </section>
+            <!-- contant-section e -->
+            <!-- footer s -->
             <footer>
                 <p>copyright ⓒ 2022 by () All Pictures cannot be copied without permission</p>
             </footer>
+            <!-- footer e -->
         </div>
     </body>
     <!-- script -->
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="assets/script.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/58c323985e.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <!-- script end -->
 
 </html>
