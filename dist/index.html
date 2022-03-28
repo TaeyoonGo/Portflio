@@ -21,7 +21,9 @@
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <!-- css end -->
     </head>
     <body>
@@ -53,26 +55,28 @@
             </header>
             <!-- header e -->
             <!-- home-section s -->
-            <section class="home-section">
+            <section class="home-section _home-section">
                 <div class="home-bg"></div>
                 <div class="text-area">
-                    <p class="sub-title">Hello World!</p>
+                    <p class="sub-title animate__animated animate__bounce">Hello World!</p>
                     <h2 class="title">
                         <span>Web</span>
                         DEVELOPER</h2>
-                    <p class="slogan">발전하는 웹 개발자 고태윤 입니다.</p>
+                    <p class="slogan">발전하는 웹 개발자
+                        <span>고태윤</span>
+                        입니다.</p>
                 </div>
             </section>
             <!-- home-section e-->
             <!-- about-section s -->
-            <section class="about-section">
+            <section class="about-section _about-section">
                 <p class="main-title">About Me</p>
                 <div class="about-box">
-                    <div class="box who">
-                        <div class="who">
-                            <h3 class="title">WHO AM
+                    <div class="box who-logo-box">
+                        <div>
+                            <h3 class="title animate__animated animate__fadeInDown" data-wow-delay="0.2s">WHO AM
                                 <span>I</span></h3>
-                            <p class="desc">항상
+                            <p class="desc animate__animated animate__fadeInUp" data-wow-delay="0.8s">항상
                                 <span>좋은 코드</span>를 생각하고<br>
                                 좋은
                                 <span>의사 소통</span>을 위해 노력하며<br>
@@ -80,93 +84,231 @@
                             </p>
                         </div>
                         <div class="logo">
-                            <h3 class="title">
-                                gt?/*G three*/
+                            <h3 class="title animate__animated animate__fadeInDown" data-wow-delay="0.4s">
+                                <span class="logo">G<span>T</span></span>
+                                /*G Three*/
                             </h3>
-                            <p class="desc">
+                            <p class="desc animate__animated animate__fadeInUp" data-wow-delay="1s">
                                 <span>G</span>reat code<br>
                                 <span>G</span>ood Communication<br>
                                 <span>G</span>rinding knowledge</p>
 
                         </div>
                     </div>
-                    <div class="box what"></div>
+                    <div class="box what">
+                        <h3 class="title animate__animated animate__fadeInDown" data-wow-delay="0.6s">WHAT
+                            <span>I</span>
+                            DO ?</h3>
+                        <p class="desc animate__animated animate__fadeInUp" data-wow-delay="1.2s">
+                            웹이라는 빈 캔버스에 지식과 기술이라는 물감을 통해 코딩을 하는것이 재미있습니다.<br>
+                            끊임없이 발전을 하기를 원하며 배움에 대한 욕심 또한 생기고 있습니다.
+                            <br>
+                            좋은 UI/UX를 구현하여 세상에 멋진 작품을 만드는것이 목표입니다.
+                            <br>
+                            지금의 열정으로 더욱 더 좋은 웹 개발자가 되도록 하겠습니다.
+                        </p>
+                    </div>
                 </div>
                 <div class="slogan-box">
-                    <p class="slogan">
-                        <span>일구일혼(一球一魂)</span>
+                    <p class="slogan animate__animated animate__fadeIn" data-wow-delay="0.4s">
+                        <span class="animate__animated animate__flash" data-wow-delay="0.6s">일구일혼(一球一魂)</span>
                         모든것에 혼을 담아 최선을 다하는것이 모토입니다.<br>
                         작은 것 하나하나 놓치지 않고 최선을 다할것을 약속드립니다.</p>
                 </div>
             </section>
             <!-- about-section e -->
             <!-- portflio-section s -->
-            <section class="portflio-section">
+            <section class="portflio-section _portflio-section">
                 <p class="main-title">Portflio</p>
                 <div
                     class="portflio-area grid"
-                    data-masonry='{ "itemSelector": "._grid-item", "columnWidth": 200 }'>
-                    <div class="_grid-item"></div>
-                    <div class="_grid-item"></div>
-                    <div class="_grid-item"></div>
-                    <div class="_grid-item"></div>
-                    <div class="_grid-item"></div>
-                    <div class="_grid-item"></div>
+                    data-masonry='{ "itemSelector": "._grid-item", "isFitWidth": true,"gutter": 20}'>
+                    <div class="grid-item _grid-item">
+                        <img src="./assets/img/bg-portflio.gif" alt="portflio">
+                        <div class="dim">
+                            <div class="skill-area">
+                                <span>반응형</span>
+                                <span>html</span>
+                                <span>css</span>
+                                <span>jquery</span>
+                                <span>javascript</span>
+                                <span>Firebase</span>
+                            </div>
+                            <span class="link">
+                                <a
+                                    href="https://www.notion.so/ece6b03a3d0444a2bd8d44b2d6484270?p=c8cfee2561854fc7975ccbcbd7999472"
+                                    target="_blank">페이지 상세보기<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="grid-item _grid-item">
+                        <img src="./assets/img/bg-enuma.gif" alt="enuma">
+                        <div class="dim">
+                            <div class="skill-area">
+                                <span>반응형</span>
+                                <span>Html</span>
+                                <span>Scss</span>
+                                <span>Vue</span>
+                                <span>i18n</span>
+                                <span>Vue-bootstrap</span>
+                                <span>Aws</span>
+                            </div>
+                            <span class="link">
+                                <a
+                                    href="https://www.notion.so/ece6b03a3d0444a2bd8d44b2d6484270?p=bc0d07d02f794e7ead5788b3ecf8d575"
+                                    target="_blank">페이지 상세보기<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="grid-item _grid-item">
+                        <img src="./assets/img/bg-pablo.png" alt="pablo">
+                        <div class="dim">
+                            <div class="skill-area">
+                                <span>Tablet</span>
+                                <span>html</span>
+                                <span>Scss</span>
+                                <span>Vue</span>
+                                <span>Vue-bootstrap</span>
+                            </div>
+                            <span class="link">
+                                <a
+                                    href="https://www.notion.so/ece6b03a3d0444a2bd8d44b2d6484270?p=20a566714a7b459ca387493770943f61"
+                                    target="_blank">페이지 상세보기<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="grid-item _grid-item">
+                        <img src="./assets/img/bg-erbank.gif" alt="erbank">
+                        <div class="dim">
+                            <div class="skill-area">
+                                <span>적응형</span>
+                                <span>Html</span>
+                                <span>Scss</span>
+                                <span>Vue</span>
+                            </div>
+                            <span class="link">
+                                <a
+                                    href="https://www.notion.so/ece6b03a3d0444a2bd8d44b2d6484270?p=3240ff05c2244fba83cf231b89956128"
+                                    target="_blank">페이지 상세보기<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="grid-item _grid-item">
+                        <img src="./assets/img/bg-tselpa.gif" alt="tselpa">
+                        <div class="dim">
+                            <div class="skill-area">
+                                <span>적응형</span>
+                                <span>html</span>
+                                <span>Scss</span>
+                                <span>jquery</span>
+                                <span>javascript</span>
+                                <span>Bootstrap4</span>
+                                <span>Aws</span>
+                            </div>
+                            <span class="link">
+                                <a
+                                    href="https://www.notion.so/ece6b03a3d0444a2bd8d44b2d6484270?p=734272c788294cdf8c206a631feb9048"
+                                    target="_blank">페이지 상세보기<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="grid-item _grid-item">
+                        <img src="./assets/img/bg-macrogen.gif" alt="macrogen">
+                        <div class="dim">
+                            <div class="skill-area">
+                                <span>적응형</span>
+                                <span>html</span>
+                                <span>Scss</span>
+                                <span>jquery</span>
+                                <span>javascript</span>
+                                <span>bootstrap5</span>
+                                <span>Aws</span>
+                            </div>
+                            <span class="link">
+                                <a
+                                    href="https://www.notion.so/ece6b03a3d0444a2bd8d44b2d6484270?p=c5b6c64267eb4f9d8d6db248e45945e4"
+                                    target="_blank">페이지 상세보기<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="grid-item _grid-item">
+                        <img src="./assets/img/bg-lgukids.png" alt="lgukids">
+                        <div class="dim">
+                            <div class="skill-area">
+                                <span>Excel</span>
+                                <span>QA</span>
+                                <span>Adb</span>
+                            </div>
+                            <span class="link">
+                                <a
+                                    href="https://www.notion.so/ece6b03a3d0444a2bd8d44b2d6484270?p=a117cbc86ab446c8b4fadc93c0622e25"
+                                    target="_blank">페이지 상세보기<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- portflio-section e -->
             <!-- skill-section s -->
-            <section class="skill-section">
+            <section class="skill-section _skill-section">
                 <p class="main-title">Skill</p>
                 <div class="box-area">
                     <div class="box skill">
-                        <p class="title">Skill</p>
+                        <p class="title animate__animated animate__fadeInDown" data-wow-delay="0.4s">Skill</p>
                         <div class="img-area">
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.1s">
                                 <img src="./assets/img/img-html-logo.svg" alt="html">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.2s">
                                 <img src="./assets/img/img-css-logo.svg" alt="css">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.3s">
                                 <img src="./assets/img/img-javascript-logo.svg" alt="javascript">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.4s">
                                 <img src="./assets/img/img-jquery-logo.svg" alt="jquery">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.5s">
                                 <img src="./assets/img/img-bootstrap-logo.svg" alt="bootstrap">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.6s">
                                 <img src="./assets/img/img-photoshop-logo.svg" alt="photohshop">
                             </div>
                         </div>
                     </div>
                     <div class="box experience">
-                        <p class="title">Experience</p>
+                        <p class="title animate__animated animate__fadeInDown" data-wow-delay="0.4s">Experience</p>
                         <div class="img-area">
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.1s">
                                 <img src="./assets/img/img-vue-logo.svg" alt="vue">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.2s">
                                 <img src="./assets/img/img-nodejs-logo.svg" alt="nodejs">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.3s">
                                 <img src="./assets/img/img-aws-logo.svg" alt="Aws">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.4s">
                                 <img src="./assets/img/img-gulp-logo.svg" alt="gulp">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.5s">
                                 <img src="./assets/img/img-git-logo.svg" alt="git">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.6s">
                                 <img src="./assets/img/img-jira-logo.svg" alt="jira">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.7s">
                                 <img src="./assets/img/img-figma-logo.svg" alt="Figam">
                             </div>
-                            <div class="img">
+                            <div class="img animate__animated animate__fadeIn" data-wow-delay="0.8s">
                                 <img src="./assets/img/img-zeplin-logo.svg" alt="zeplin">
                             </div>
 
@@ -176,7 +318,7 @@
             </section>
             <!-- skill-section e -->
             <!-- contant-section s -->
-            <section class="contact-section">
+            <section class="contact-section _contact-section">
                 <p class="main-title">Contact</p>
                 <div class="contact-area">
                     <div class="box">
@@ -245,6 +387,17 @@
         src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/58c323985e.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.boomcdn.com/libs/wow-js/1.3.0/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            boxClass: 'animate__animated', // default
+            animateClass: 'animate__animated', // default
+            offset: 200, // default
+            mobile: true, // default
+            live: true // default
+        })
+        wow.init();
+    </script>
     <!-- script end -->
 
 </html>

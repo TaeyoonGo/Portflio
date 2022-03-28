@@ -41,11 +41,35 @@ $(document).ready(function () {
       console.log('FAILED...', error);
     });
   });
-}); // masonry 실행
+}); // 네비게이션 이동
 
-var grid = document.querySelector('.grid');
-var msnry = new Masonry(grid, {
-  // options...
-  itemSelector: '._grid-item',
-  columnWidth: 300
+$(document).ready(function () {
+  $('#btn1').click(function () {
+    var offset = $('_home-section').offset(); //선택한 태그의 위치를 반환
+
+    $('html,body').animate({
+      scrollTop: offset.top
+    }, 400);
+  });
+  $('#btn1').click(function () {
+    var offset = $('_about-section').offset(); //선택한 태그의 위치를 반환
+
+    $('html,body').animate({
+      scrollTop: offset.top
+    }, 400);
+  });
+  $('#btn1').click(function () {
+    var offset = $('#div1').offset(); //선택한 태그의 위치를 반환
+
+    $('html,body').animate({
+      scrollTop: offset.top
+    }, 400);
+  });
+  $('#btn1').click(function () {
+    var offset = $('#div1').offset(); //선택한 태그의 위치를 반환
+
+    $('html,body').animate({
+      scrollTop: offset.top
+    }, 400);
+  });
 });
