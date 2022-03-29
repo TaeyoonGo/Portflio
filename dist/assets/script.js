@@ -44,32 +44,58 @@ $(document).ready(function () {
 }); // 네비게이션 이동
 
 $(document).ready(function () {
-  $('#btn1').click(function () {
-    var offset = $('_home-section').offset(); //선택한 태그의 위치를 반환
-
+  $('._home-btn').click(function () {
+    var offset = $('._home-section').offset();
     $('html,body').animate({
-      scrollTop: offset.top
+      scrollTop: offset.top - 100
     }, 400);
   });
-  $('#btn1').click(function () {
-    var offset = $('_about-section').offset(); //선택한 태그의 위치를 반환
-
+  $('._about-btn').click(function () {
+    var offset = $('._about-section').offset();
     $('html,body').animate({
-      scrollTop: offset.top
+      scrollTop: offset.top - 100
     }, 400);
   });
-  $('#btn1').click(function () {
-    var offset = $('#div1').offset(); //선택한 태그의 위치를 반환
-
+  $('._portflio-btn').click(function () {
+    var offset = $('._portflio-section').offset();
     $('html,body').animate({
-      scrollTop: offset.top
+      scrollTop: offset.top - 100
     }, 400);
   });
-  $('#btn1').click(function () {
-    var offset = $('#div1').offset(); //선택한 태그의 위치를 반환
-
+  $('._skill-btn').click(function () {
+    var offset = $('._skill-section').offset();
     $('html,body').animate({
-      scrollTop: offset.top
+      scrollTop: offset.top - 100
     }, 400);
+  });
+  $('._contact-btn').click(function () {
+    var offset = $('._contact-section').offset();
+    $('html,body').animate({
+      scrollTop: offset.top - 100
+    }, 400);
+  });
+}); // Top 버튼
+
+$(document).ready(function () {
+  $('.btn-totop').click(function () {
+    $('html,body').animate({
+      scrollTop: 0
+    }, {
+      duration: 400
+    });
+    return false;
+  });
+  $(window).on('scroll', function () {
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > 150) {
+      $('.btn-totop').css({
+        'opacity': 1
+      });
+    } else {
+      $('.btn-totop').css({
+        'opacity': 0
+      });
+    }
   });
 });

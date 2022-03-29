@@ -41,6 +41,7 @@
             font-family: "Ubuntu", sans-serif;
             color: #fff;
             font-weight: 300;
+            cursor: pointer;
             &:hover {
               text-decoration: none;
             }
@@ -68,6 +69,7 @@
     }
     &.home-section {
       position: relative;
+      perspective: 1000px;
       .home-bg {
         position: absolute;
         background-color: rgba(54, 54, 54, 0.4);
@@ -77,11 +79,46 @@
         right: 0;
         z-index: 0;
       }
+      .home-card {
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        top: 30%;
+        right: 15%;
+        transition: 1s;
+        transform-style: preserve-3d;
+        transform: rotateY(0);
+        &:hover {
+          transform: rotateY(180deg);
+        }
+        .card-side {
+          backface-visibility: hidden;
+          transform-style: preserve-3d;
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: 20px 20px 0 rgb(0 0 0);
+          border-radius: 12px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          &.front-bg {
+            z-index: 1;
+            background-image: url("./img/img-picture.gif");
+          }
+          &.back-bg {
+            transform: rotateY(180deg);
+            background-image: url("./img/img-workspace.JPG");
+          }
+        }
+      }
       .text-area {
         display: inline-block;
         position: absolute;
         top: 50%;
-        left: 30%;
+        left: 20%;
         transform: translate(-30%, -50%);
         color: #fff;
         .title {
@@ -465,6 +502,21 @@
       text-align: center;
     }
   }
+  .btn-totop {
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    z-index: 999;
+    border: 2px solid #53f6c7;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    i {
+      font-size: 24px;
+      color: #53f6c7;
+    }
+  }
 }
 
 // 애니메이션
@@ -478,4 +530,75 @@
     transform: translateZ(0);
     background-color: #53f6c7;
   }
+}
+
+/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .wrap {
+    header {
+      nav {
+        ul {
+          li {
+            a {
+              padding: 8px 16px;
+            }
+          }
+        }
+      }
+    }
+    section {
+      padding: 0px 20px;
+      .main-title {
+        text-align: center;
+      }
+      &.about-section {
+        .about-box {
+          display: block;
+          .box {
+            width: 100%;
+            &.who-logo-box {
+              margin-bottom: 60px;
+            }
+            &.what {
+              margin-left: 0px;
+            }
+          }
+        }
+        .slogan-box {
+          padding: 10px;
+          .slogan {
+            font-size: 20px;
+          }
+        }
+      }
+      &.portflio-section {
+        .portflio-area {
+          .grid-item {
+            width: 300px;
+          }
+        }
+      }
+      &.contact-section {
+        .contact-area {
+          .box {
+            margin-right: 8px;
+            padding: 20px;
+            flex-direction: column;
+            .icon-area {
+              flex-direction: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+}
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width: 480px) and (max-width: 767px) {
+}
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width: 479px) {
 }
