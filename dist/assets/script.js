@@ -78,6 +78,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.btn-totop').click(function () {
+    console.log('hihi');
     $('html,body').animate({
       scrollTop: 0
     }, {
@@ -97,5 +98,10 @@ $(document).ready(function () {
         'opacity': 0
       });
     }
+  });
+});
+$(document).ready(function () {
+  $('._menu-bar').click(function () {
+    $(this).toggleClass('active');
   });
 });

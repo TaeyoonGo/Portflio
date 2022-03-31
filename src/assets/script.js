@@ -51,31 +51,31 @@ $(document).ready(function () {
 // 네비게이션 이동
 $(document).ready(function () {
     $('._home-btn').click(function () {
-        var offset = $('._home-section').offset(); 
+        var offset = $('._home-section').offset();
         $('html,body').animate({
             scrollTop: offset.top - 100
         }, 400);
     });
     $('._about-btn').click(function () {
-        var offset = $('._about-section').offset(); 
+        var offset = $('._about-section').offset();
         $('html,body').animate({
             scrollTop: offset.top - 100
         }, 400);
     });
     $('._portflio-btn').click(function () {
-        var offset = $('._portflio-section').offset(); 
+        var offset = $('._portflio-section').offset();
         $('html,body').animate({
             scrollTop: offset.top - 100
         }, 400);
     });
     $('._skill-btn').click(function () {
-        var offset = $('._skill-section').offset(); 
+        var offset = $('._skill-section').offset();
         $('html,body').animate({
             scrollTop: offset.top - 100
         }, 400);
     });
     $('._contact-btn').click(function () {
-        var offset = $('._contact-section').offset(); 
+        var offset = $('._contact-section').offset();
         $('html,body').animate({
             scrollTop: offset.top - 100
         }, 400);
@@ -86,6 +86,7 @@ $(document).ready(function () {
 // Top 버튼
 $(document).ready(function () {
     $('.btn-totop').click(function () {
+      console.log('hihi');
         $('html,body').animate({
             scrollTop: 0
         }, {duration: 400});
@@ -99,4 +100,11 @@ $(document).ready(function () {
             $('.btn-totop').css({'opacity': 0})
         }
     })
+});
+
+$(document).ready(function () {
+  $('._menu-bar').click(function () {
+      $(this).toggleClass('active')
+  });
+ 
 });
