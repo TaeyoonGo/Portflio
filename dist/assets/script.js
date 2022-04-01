@@ -99,9 +99,13 @@ $(document).ready(function () {
       });
     }
   });
-});
+}); // 모바일 네비게이션 
+
 $(document).ready(function () {
   $('._menu-bar').click(function () {
-    $(this).toggleClass('active');
+    $('.line').removeClass('init');
+    $('._line-top').toggleClass('line-top').toggleClass('top-reverse');
+    $('._line-mid').toggleClass('line-mid').toggleClass('mid-reverse');
+    $('._line-bot').toggleClass('line-bot').toggleClass('bot-reverse');
   });
 });

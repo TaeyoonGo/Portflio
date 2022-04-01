@@ -86,7 +86,7 @@ $(document).ready(function () {
 // Top 버튼
 $(document).ready(function () {
     $('.btn-totop').click(function () {
-      console.log('hihi');
+        console.log('hihi');
         $('html,body').animate({
             scrollTop: 0
         }, {duration: 400});
@@ -102,9 +102,18 @@ $(document).ready(function () {
     })
 });
 
+// 모바일 네비게이션 
 $(document).ready(function () {
-  $('._menu-bar').click(function () {
-      $(this).toggleClass('active')
-  });
- 
+    $('._menu-bar').click(function () {
+        $('.line').removeClass('init');
+        $('._line-top')
+            .toggleClass('line-top')
+            .toggleClass('top-reverse');
+        $('._line-mid')
+            .toggleClass('line-mid')
+            .toggleClass('mid-reverse');
+        $('._line-bot')
+            .toggleClass('line-bot')
+            .toggleClass('bot-reverse');
+    })
 });
