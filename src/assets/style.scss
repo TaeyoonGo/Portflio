@@ -33,6 +33,7 @@
 
             }
             .menu-bar {
+                display: none;
                 width: 45px;
                 cursor: pointer;
                 span {
@@ -47,27 +48,27 @@
                     position: relative;
                 }
                 span {
-                  &:nth-child(1) {
-                      animation: line-top 0.5s forwards ease-out, line-top-rotate 0.3s 0.5s forwards ease-out;
-                      &.top-reverse {
-                          animation: line-top-rotate-reverse 0.3s forwards ease-out, line-top-reverse 0.5s 0.3s forwards ease-out;
-                      }
+                    &:nth-child(1) {
+                        animation: line-top 0.5s forwards ease-out, line-top-rotate 0.3s 0.5s forwards ease-out;
+                        &.top-reverse {
+                            animation: line-top-rotate-reverse 0.3s forwards ease-out, line-top-reverse 0.5s 0.3s forwards ease-out;
+                        }
 
-                  }
-                  &:nth-child(2) {
-                      animation: line-mid 0.5s forwards ease-out;
-                      &.mid-reverse {
-                          animation: line-mid-invisible 0.3s forwards ease-out, line-mid-reverse 0.5s 0.3s forwards ease-out;
-                      }
+                    }
+                    &:nth-child(2) {
+                        animation: line-mid 0.5s forwards ease-out;
+                        &.mid-reverse {
+                            animation: line-mid-invisible 0.3s forwards ease-out, line-mid-reverse 0.5s 0.3s forwards ease-out;
+                        }
 
-                  }
-                  &:nth-child(3) {
-                      animation: line-bot 0.5s forwards ease-out, line-bot-rotate 0.3s 0.5s forwards ease-out;
-                      &.bot-reverse {
-                          animation: line-bot-rotate-reverse 0.3s forwards ease-out, line-bot-reverse 0.5s 0.3s forwards ease-out;
-                      }
-                  }
-              }
+                    }
+                    &:nth-child(3) {
+                        animation: line-bot 0.5s forwards ease-out, line-bot-rotate 0.3s 0.5s forwards ease-out;
+                        &.bot-reverse {
+                            animation: line-bot-rotate-reverse 0.3s forwards ease-out, line-bot-reverse 0.5s 0.3s forwards ease-out;
+                        }
+                    }
+                }
             }
             ul {
                 margin: 0;
@@ -547,6 +548,7 @@
         height: 50px;
         background-color: transparent;
         outline: none;
+        opacity: 0;
         i {
             font-size: 24px;
             color: #53f6c7;
@@ -576,7 +578,6 @@
     }
 }
 
-
 @keyframes line-top-reverse {
     0% {
         transform: translateY(13px);
@@ -594,7 +595,6 @@
         transform: translateY(13px) rotateZ(45deg);
     }
 }
-
 
 @keyframes line-top-rotate-reverse {
     0% {
@@ -641,7 +641,6 @@
     }
 }
 
-/* 추가된 부분 */
 @keyframes line-bot-reverse {
     0% {
         transform: translateY(-18px);
@@ -660,7 +659,6 @@
     }
 }
 
-/* 추가된 부분 */
 @keyframes line-bot-rotate-reverse {
     0% {
         transform: translateY(-18px) rotateZ(135deg);
@@ -739,17 +737,35 @@
             border-bottom: none !important;
             background-color: #363636;
             nav {
-                .menu-bar {
-                    display: block;
-
-                }
                 ul {
+                    top: 60px;
+                    left: 0;
                     display: none;
+                    position: absolute;
+                    width: 100vw;
+
+                    height: calc(100vh - 60px);
+                    background-color: rgba(0,0,0,0.7);
+                    z-index: 100;
+                    text-align: center;
+                    &.active {
+                        display: block;
+                    }
                     li {
+                        display: block;
+                        margin-bottom: 20px;
+                        margin-top: 20px;
+                        &:hover {
+                            border: none;
+                        }
                         a {
+                            font-size: 50px;
                             padding: 8px 16px;
                         }
                     }
+                }
+                .menu-bar{
+                  display: block;
                 }
             }
 
@@ -902,14 +918,35 @@
             border-bottom: none !important;
             background-color: #363636;
             nav {
-
                 ul {
+                    top: 60px;
+                    left: 0;
                     display: none;
+                    position: absolute;
+                    width: 100vw;
+
+                    height: calc(100vh - 60px);
+                    background-color: rgba(0,0,0,0.7);
+                    z-index: 100;
+                    text-align: center;
+                    &.active {
+                        display: block;
+                    }
                     li {
+                        display: block;
+                        margin-bottom: 20px;
+                        margin-top: 20px;
+                        &:hover {
+                            border: none;
+                        }
                         a {
+                            font-size: 50px;
                             padding: 8px 16px;
                         }
                     }
+                }
+                .menu-bar{
+                  display: block;
                 }
             }
             h1 {

@@ -23,11 +23,11 @@ $(document).ready(function () {
 // emailjs 실행
 $(document).ready(function () {
     emailjs.init("U4dPLe9cyju41MkJl");
-    //"user_xxxxx"이 부분은 사용자마다 다르니 반드시 emailJS의 installation 화면을 확인
+   
     $('input[name=submit]').click(function () {
 
         var templateParams = {
-            //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+         
             name: $('input[name=name]').val(),
             phone: $('input[name=phone]').val(),
             email: $('input[name=email]').val(),
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         emailjs
             .send('service_69v2pcn', 'template_hp6y3wm', templateParams)
-            //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+          
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('안녕하세요 고태윤입니다 :) 연락을 주셔서 감사합니다.')
@@ -86,7 +86,6 @@ $(document).ready(function () {
 // Top 버튼
 $(document).ready(function () {
     $('.btn-totop').click(function () {
-        console.log('hihi');
         $('html,body').animate({
             scrollTop: 0
         }, {duration: 400});
@@ -102,7 +101,7 @@ $(document).ready(function () {
     })
 });
 
-// 모바일 네비게이션 
+// 모바일 네비게이션 애니메이션 동작
 $(document).ready(function () {
     $('._menu-bar').click(function () {
         $('.line').removeClass('init');
@@ -115,5 +114,48 @@ $(document).ready(function () {
         $('._line-bot')
             .toggleClass('line-bot')
             .toggleClass('bot-reverse');
+    })
+});
+
+// 모바일 네비게이션 실행
+$(document).ready(function () {
+    $('._menu-bar').click(function () {
+        $(this).toggleClass('active')
+        $(this)
+            .siblings('._navis')
+            .toggleClass('active')
+    })
+});
+
+// 네비게이션 바 닫힘
+$(document).ready(function () {
+    $('._navi').click(function () {
+        $(this)
+            .parent('._navis')
+            .removeClass('active');
+        $(this)
+            .parent('._navis')
+            .siblings('._menu-bar')
+            .find('.line')
+            .removeClass('init');
+        $(this)
+            .parent('._navis')
+            .siblings('._menu-bar')
+            .find('._line-top')
+            .toggleClass('line-top')
+            .toggleClass('top-reverse');
+        $(this)
+            .parent('._navis')
+            .siblings('._menu-bar')
+            .find('._line-mid')
+            .toggleClass('line-mid')
+            .toggleClass('mid-reverse');
+        $(this)
+            .parent('._navis')
+            .siblings('._menu-bar')
+            .find('._line-bot')
+            .toggleClass('line-bot')
+            .toggleClass('bot-reverse');
+        console.log();
     })
 });
