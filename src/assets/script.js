@@ -158,3 +158,10 @@ $(document).ready(function () {
         console.log();
     })
 });
+
+//massory
+$(document).ready(function ()  {
+    $('.grid').masonry(
+        {columnWidth: '._grid-item', itemSelector: '._grid-item', gutter: 20, percentPosition: true}
+    );
+});

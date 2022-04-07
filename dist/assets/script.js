@@ -122,4 +122,13 @@ $(document).ready(function () {
     $(this).parent('._navis').siblings('._menu-bar').find('._line-bot').toggleClass('line-bot').toggleClass('bot-reverse');
     console.log();
   });
+}); //massory
+
+$(document).ready(function () {
+  $('.grid').masonry({
+    columnWidth: '._grid-item',
+    itemSelector: '._grid-item',
+    gutter: 20,
+    percentPosition: true
+  });
 });

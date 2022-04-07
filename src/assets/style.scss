@@ -301,7 +301,7 @@
             .portflio-area {
                 margin: 0 auto;
                 .grid-item {
-                    width: 450px;
+                    width: calc(33.3333% - 20px);
                     height: 300px;
                     border: 2px solid rgba(54, 54, 54, 0.4);
                     border-radius: 12px;
@@ -715,7 +715,7 @@
             &.portflio-section {
                 .portflio-area {
                     .grid-item {
-                        width: 300px;
+                      width: calc(50% - 20px);
                     }
                 }
             }
