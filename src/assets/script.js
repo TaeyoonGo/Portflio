@@ -23,11 +23,11 @@ $(document).ready(function () {
 // emailjs 실행
 $(document).ready(function () {
     emailjs.init("U4dPLe9cyju41MkJl");
-   
+
     $('input[name=submit]').click(function () {
 
         var templateParams = {
-         
+
             name: $('input[name=name]').val(),
             phone: $('input[name=phone]').val(),
             email: $('input[name=email]').val(),
@@ -36,7 +36,6 @@ $(document).ready(function () {
 
         emailjs
             .send('service_69v2pcn', 'template_hp6y3wm', templateParams)
-          
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('안녕하세요 고태윤입니다 :) 연락을 주셔서 감사합니다.')

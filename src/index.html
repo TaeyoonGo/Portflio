@@ -41,26 +41,26 @@
                     </div>
                     <ul class="_navis">
                         <li class="_navi">
-                            <a class="_home-btn" href="#">Home</a>
+                            <a class="_home-btn" href="#Home">Home</a>
                         </li>
                         <li class="_navi">
-                            <a class="_about-btn" onclick="">About me</a>
+                            <a class="_about-btn" href="#About">About me</a>
                         </li>
                         <li class="_navi">
-                            <a class="_portflio-btn">Portflio</a>
+                            <a class="_portflio-btn" href="#PortFlio">Portflio</a>
                         </li>
                         <li class="_navi">
-                            <a class="_skill-btn">Skill</a>
+                            <a class="_skill-btn" href="#Skill">Skill</a>
                         </li>
                         <li class="_navi">
-                            <a class="_contact-btn">Contact</a>
+                            <a class="_contact-btn" href="#Contact">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </header>
             <!-- header e -->
             <!-- home-section s -->
-            <section class="home-section _home-section">
+            <section class="home-section _home-section" id="home">
                 <div class="home-bg"></div>
                 <div class="home-card">
                     <div class="card-side front-bg"></div>
@@ -81,8 +81,8 @@
             </section>
             <!-- home-section e-->
             <!-- about-section s -->
-            <section class="about-section _about-section">
-                <p class="main-title">About Me</p>
+            <section class="about-section _about-section" id="About">
+                <h2 class="main-title">About Me</h2>
                 <div class="about-box">
                     <div class="box who-logo-box">
                         <div>
@@ -133,8 +133,8 @@
             </section>
             <!-- about-section e -->
             <!-- portflio-section s -->
-            <section class="portflio-section _portflio-section">
-                <p class="main-title">Portflio</p>
+            <section class="portflio-section _portflio-section" id="Portflio">
+                <h2 class="main-title">Portflio</h2>
                 <div
                     class="portflio-area grid"
                     data-masonry='{ "itemSelector": "._grid-item", "isFitWidth": true,"gutter": 20}'>
@@ -290,31 +290,31 @@
                         </div>
                     </div>
                     <div class="grid-item _grid-item" style="background-size: cover;">
-                      <img src="./assets/img/img-drg.gif" alt="DR.G">
-                      <div class="dim">
-                          <div class="skill-area">
-                              <span>모바일</span>
-                              <span>Html</span>
-                              <span>Scss</span>
-                              <span>Jquery</span>
-                              <span>javascript</span>
-                              <span>Bootstrap4</span>
-                              <span>Aws</span>
-                          </div>
-                          <span class="link">
-                              <a
-                                  href="https://www.notion.so/ece6b03a3d0444a2bd8d44b2d6484270?p=46dfa9c5f15f45c9acebe20133855268"
-                                  target="_blank">페이지 상세보기<i class="fa fa-arrow-right"></i>
-                              </a>
-                          </span>
-                      </div>
-                  </div>
+                        <img src="./assets/img/img-drg.gif" alt="DR.G">
+                        <div class="dim">
+                            <div class="skill-area">
+                                <span>모바일</span>
+                                <span>Html</span>
+                                <span>Scss</span>
+                                <span>Jquery</span>
+                                <span>javascript</span>
+                                <span>Bootstrap4</span>
+                                <span>Aws</span>
+                            </div>
+                            <span class="link">
+                                <a
+                                    href="https://www.notion.so/ece6b03a3d0444a2bd8d44b2d6484270?p=46dfa9c5f15f45c9acebe20133855268"
+                                    target="_blank">페이지 상세보기<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- portflio-section e -->
             <!-- skill-section s -->
-            <section class="skill-section _skill-section">
-                <p class="main-title">Skill</p>
+            <section class="skill-section _skill-section" id="Skill">
+                <h2 class="main-title">Skill</h2>
                 <div class="box-area">
                     <div class="box skill">
                         <p class="title animate__animated animate__fadeInDown" data-wow-delay="0.4s">Skill</p>
@@ -373,8 +373,8 @@
             </section>
             <!-- skill-section e -->
             <!-- contant-section s -->
-            <section class="contact-section _contact-section">
-                <p class="main-title">Contact</p>
+            <section class="contact-section _contact-section" id="Contact">
+                <h2 class="main-title">Contact</h2>
                 <div class="contact-area">
                     <div class="box">
                         <div class="text">
@@ -391,17 +391,19 @@
                                 <span>Notion</span>
                                 :
                                 <a
-                                    target="_blink"
-                                    href="https://www.notion.so/Taeyoon__Go-383b1bfb350344a3a906d973be970f9f">Click</a>
+                                    href="https://www.notion.so/Taeyoon__Go-383b1bfb350344a3a906d973be970f9f"
+                                    target="_blank">Click</a>
                             </p>
                         </div>
                         <div class="icon-area">
                             <a href="https://www.instagram.com/taeyoon__go" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-instagram">
+                                    <span>인스타그램</span></i>
                             </a>
 
                             <a href="https://github.com/TaeyoonGo" target="_blank">
-                                <i class="fa-brands fa-git-alt"></i>
+                                <i class="fa-brands fa-git-alt">
+                                    <span>Git</span></i>
                             </a>
                         </div>
                     </div>
@@ -435,8 +437,7 @@
             </button>
         </div>
     </body>
-    <!-- script -->
-
+    <!-- script s-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
         type="text/javascript"
@@ -457,6 +458,6 @@
         })
         wow.init();
     </script>
-    <!-- script end -->
+    <!-- script e -->
 
 </html>
