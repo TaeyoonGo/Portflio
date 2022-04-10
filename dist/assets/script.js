@@ -124,13 +124,12 @@ $(document).ready(function () {
 
 
   function NaviClose() {
-    $('._navi').click(function () {
-      $(this).parent('._navis').removeClass('active');
-      $(this).parent('._navis').siblings('._menu-bar').find('.line').removeClass('init');
-      $(this).parent('._navis').siblings('._menu-bar').find('._line-top').toggleClass('line-top').toggleClass('top-reverse');
-      $(this).parent('._navis').siblings('._menu-bar').find('._line-mid').toggleClass('line-mid').toggleClass('mid-reverse');
-      $(this).parent('._navis').siblings('._menu-bar').find('._line-bot').toggleClass('line-bot').toggleClass('bot-reverse');
-      console.log();
+    $('.wrap header nav ul li a').click(function () {
+      $(this).parents('._navis').removeClass('active');
+      $(this).parents('._navis').siblings('._menu-bar').find('.line').removeClass('init');
+      $(this).parents('._navis').siblings('._menu-bar').find('._line-top').toggleClass('line-top').toggleClass('top-reverse');
+      $(this).parents('._navis').siblings('._menu-bar').find('._line-mid').toggleClass('line-mid').toggleClass('mid-reverse');
+      $(this).parents('._navis').siblings('._menu-bar').find('._line-bot').toggleClass('line-bot').toggleClass('bot-reverse');
     });
   } //massory
 

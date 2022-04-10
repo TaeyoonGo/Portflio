@@ -93,9 +93,11 @@ $(document).ready(function () {
                 $('._btn-totop').css({'opacity': 0})
             }
         })
-        $('._btn-totop').click(function(){
-          $('html, body').animate({scrollTop:0},400);
-          return false;
+        $('._btn-totop').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
         });
 
     }
@@ -117,6 +119,7 @@ $(document).ready(function () {
     // 모바일 네비게이션 실행
     function MobileNavi() {
         $('._menu-bar').click(function () {
+
             $(this).toggleClass('active')
             $(this)
                 .siblings('._navis')
@@ -125,34 +128,34 @@ $(document).ready(function () {
     }
     // 네비게이션 바 닫힘
     function NaviClose() {
-        $('._navi').click(function () {
+        $('.wrap header nav ul li a').click(function () {
             $(this)
-                .parent('._navis')
+                .parents('._navis')
                 .removeClass('active');
             $(this)
-                .parent('._navis')
+                .parents('._navis')
                 .siblings('._menu-bar')
                 .find('.line')
                 .removeClass('init');
             $(this)
-                .parent('._navis')
+                .parents('._navis')
                 .siblings('._menu-bar')
                 .find('._line-top')
                 .toggleClass('line-top')
                 .toggleClass('top-reverse');
             $(this)
-                .parent('._navis')
+                .parents('._navis')
                 .siblings('._menu-bar')
                 .find('._line-mid')
                 .toggleClass('line-mid')
                 .toggleClass('mid-reverse');
             $(this)
-                .parent('._navis')
+                .parents('._navis')
                 .siblings('._menu-bar')
                 .find('._line-bot')
                 .toggleClass('line-bot')
                 .toggleClass('bot-reverse');
-            console.log();
+
         })
     }
     //massory
@@ -175,4 +178,5 @@ $(document).ready(function () {
     }
 
     init();
+
 });

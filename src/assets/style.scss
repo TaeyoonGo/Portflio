@@ -748,7 +748,6 @@
                     display: none;
                     position: absolute;
                     width: 100vw;
-
                     height: calc(100vh - 60px);
                     background-color: rgba(0,0,0,0.7);
                     z-index: 100;
@@ -764,6 +763,8 @@
                             border: none;
                         }
                         a {
+                            width: 100%;
+                            height: 100%;
                             font-size: 50px;
                             padding: 8px 16px;
                         }
@@ -945,8 +946,11 @@
                             border: none;
                         }
                         a {
+                            width: 100%;
+                            height: 100%;
                             font-size: 50px;
                             padding: 8px 16px;
+
                         }
                     }
                 }
