@@ -52,48 +52,52 @@ $(document).ready(function () {
             $('html,body').animate({
                 scrollTop: offset.top - 100
             }, 400);
+            return false;
         });
         $('._about-btn').click(function () {
             var offset = $('._about-section').offset();
             $('html,body').animate({
                 scrollTop: offset.top - 100
             }, 400);
+            return false;
         });
         $('._portflio-btn').click(function () {
             var offset = $('._portflio-section').offset();
             $('html,body').animate({
                 scrollTop: offset.top - 100
             }, 400);
+            return false;
         });
         $('._skill-btn').click(function () {
             var offset = $('._skill-section').offset();
             $('html,body').animate({
                 scrollTop: offset.top - 100
             }, 400);
+            return false;
         });
         $('._contact-btn').click(function () {
             var offset = $('._contact-section').offset();
             $('html,body').animate({
                 scrollTop: offset.top - 100
             }, 400);
+            return false;
         });
     }
     // Top 버튼
-    function Top() {
-        $('.btn-totop').click(function () {
-            $('html,body').animate({
-                scrollTop: 0
-            }, {duration: 400});
-            return false;
-        });
+    function TopBtn() {
         $(window).on('scroll', function () {
             var scrollTop = $(window).scrollTop()
             if (scrollTop > 150) {
-                $('.btn-totop').css({'opacity': 1})
+                $('._btn-totop').css({'opacity': 1})
             } else {
-                $('.btn-totop').css({'opacity': 0})
+                $('._btn-totop').css({'opacity': 0})
             }
         })
+        $('._btn-totop').click(function(){
+          $('html, body').animate({scrollTop:0},400);
+          return false;
+        });
+
     }
     // 모바일 네비게이션 애니메이션 동작
     function MobileAnimation() {
@@ -158,17 +162,17 @@ $(document).ready(function () {
         );
     }
 
-    function init(){
-      Scroll();
-      Email();
-      Navi();
-      Top();
-      MobileAnimation();
-      MobileNavi();
-      NaviClose();
-      Massory();
+    //init
+    function init() {
+        Scroll();
+        Email();
+        Navi();
+        TopBtn();
+        MobileAnimation();
+        MobileNavi();
+        NaviClose();
+        Massory();
     }
 
-    
     init();
 });
