@@ -651,6 +651,9 @@
         background-color: transparent;
         outline: none;
         opacity: 0;
+        &:hover{
+          animation: bounce 1.2s ease infinite alternate;
+        }
         i {
             font-size: 24px;
             color: #53f6c7;
